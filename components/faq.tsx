@@ -12,12 +12,17 @@ const faqs = [
   {
     question: "Is this Vidu S1 page connected to a live API?",
     answer:
-      "No. This landing page is informational and lead-generation only. A production integration should keep API tokens on the server and connect Vidu S1 through the official API, RTC SDK, and WebSocket control flow.",
+      "No. This landing page is informational and lead-generation only. A production integration should keep Vidu S1, HeyGen API, and Replicate tokens on the server and expose only short-lived session or job details to the client.",
   },
   {
     question: "What do teams need to integrate Vidu S1?",
     answer:
       "A typical integration prepares a server-side API token, one avatar image or base64 asset, a persona description, RTC media setup, a WebSocket control channel, readiness retry handling, heartbeat handling, hangup logic, and usage review.",
+  },
+  {
+    question: "Can we connect HeyGen API or Replicate?",
+    answer:
+      "Yes. Use a server-side provider router: send realtime avatar sessions to Vidu S1 or HeyGen API when a live presenter experience is needed, and send async model experiments or companion media jobs to Replicate predictions. Normalize status, retries, webhooks, billing, and moderation before updating the user interface.",
   },
   {
     question: "Which avatar styles are supported?",

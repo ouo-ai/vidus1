@@ -11,6 +11,12 @@ const codeExamples = {
 2. Create a live session with avatar image + persona
 3. Store live.id for RTC and WebSocket control
 4. Return only short-lived room details to the client`,
+  Providers: `# API provider router
+1. Keep Vidu S1, HeyGen API, and Replicate keys server-side
+2. Route live avatar sessions to Vidu S1 or HeyGen API
+3. Route async model jobs to Replicate predictions
+4. Normalize session, prediction, webhook, and retry states
+5. Store provider usage, policy review, and failure reasons`,
   RTC: `# Client media setup
 1. Join the returned RTC channel
 2. Publish user microphone audio

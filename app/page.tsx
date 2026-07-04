@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { VideoGallery } from "@/components/video-gallery"
 import { HowItWorks } from "@/components/how-it-works"
+import { ProviderIntegrations } from "@/components/provider-integrations"
 import { QuickStart } from "@/components/quick-start"
 import { UseCases } from "@/components/use-cases"
 import { Stats } from "@/components/stats"
@@ -25,7 +26,7 @@ const jsonLd = [
     operatingSystem: "Web, iOS, Android, RTC-enabled clients",
     category: "Real-time interactive video avatar platform",
     description:
-      "Vidu S1 is a streaming video generation model and API platform for evaluating real-time interactive digital humans with custom avatars, voice control, RTC media delivery, and WebSocket session control.",
+      "Vidu S1 is a streaming video generation model and API platform for evaluating real-time interactive digital humans with custom avatars, RTC media delivery, WebSocket session control, and server-side provider routing for HeyGen API and Replicate workflows.",
     brand: {
       "@type": "Brand",
       name: "Vidu",
@@ -38,6 +39,7 @@ const jsonLd = [
       "Custom human, anime, and mascot avatar personas",
       "Voice, text, and video interaction patterns",
       "RTC media delivery with WebSocket control signaling",
+      "Server-side provider routing for Vidu S1, HeyGen API, and Replicate workflows",
       "Readiness, heartbeat, hangup, and usage review workflow",
     ],
   },
@@ -59,7 +61,7 @@ const jsonLd = [
         name: "Is this Vidu S1 page connected to a live API?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. This landing page is informational and lead-generation only. A production integration should keep API tokens on the server and connect Vidu S1 through the official API, RTC SDK, and WebSocket control flow.",
+          text: "No. This landing page is informational and lead-generation only. A production integration should keep Vidu S1, HeyGen API, and Replicate tokens on the server and expose only short-lived session or job details to the client.",
         },
       },
       {
@@ -68,6 +70,14 @@ const jsonLd = [
         acceptedAnswer: {
           "@type": "Answer",
           text: "A typical integration prepares a server-side API token, one avatar image or base64 asset, a persona description, RTC media setup, a WebSocket control channel, readiness retry handling, heartbeat handling, hangup logic, and usage review.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can teams connect HeyGen API or Replicate with a Vidu S1 pilot?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Teams can plan a server-side provider layer that keeps Vidu S1, HeyGen API, and Replicate credentials off the browser, routes realtime avatar sessions or asynchronous prediction jobs, and normalizes status, retries, usage, and policy review before exposing results to users.",
         },
       },
       {
@@ -111,6 +121,7 @@ export default function Home() {
       <Hero />
       <VideoGallery />
       <HowItWorks />
+      <ProviderIntegrations />
       <QuickStart />
       <UseCases />
       <LogoCloud />

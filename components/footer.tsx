@@ -4,6 +4,7 @@ import { Video } from "lucide-react"
 const footerLinks = {
   Product: [
     { label: "Pipeline", href: "#pipeline" },
+    { label: "Provider APIs", href: "#provider-integrations" },
     { label: "Use Cases", href: "#use-cases" },
     { label: "Usage Notes", href: "#pricing" },
     { label: "Integration Notes", href: "#docs" },
